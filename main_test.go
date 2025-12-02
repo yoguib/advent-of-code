@@ -5,6 +5,8 @@ import (
 	"testing"
 )
 
+// answer: 41823587546
+
 func Test_ParseRanges(t *testing.T) {
 	t.Run("valid inputs", func(t *testing.T) {
 		input := "11-22,95-115,998-1012"

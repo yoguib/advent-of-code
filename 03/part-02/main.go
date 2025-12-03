@@ -24,9 +24,7 @@ func main() {
 	// 	"818181911112111",
 	// }
 
-	// 169172125774058
-	// 171990312704578
-	var sum uint64
+	sum := 0
 	for _, input := range inputs {
 
 		data := formatInput(input)
@@ -43,25 +41,23 @@ func main() {
 		}
 		fmt.Println("Final", finalS)
 		final, _ := strconv.Atoi(finalS)
-		sum += uint64(final)
-		// [9883332222222 2 2 2]
-		// 234234234234278
-		//   4 34234234278
-		//  34 34 34234278
+		sum += final
+
 	}
 
 	fmt.Println("Result", sum)
+
+	if sum != 171990312704598 {
+		fmt.Println("She is broken")
+	} else {
+		fmt.Println("Good stuff")
+	}
 
 }
 
 func removeSmallest(data []int) []int {
 	index := 0
 	for i, number := range data {
-		if number == 1 {
-			index = i
-			break
-		}
-
 		if i+2 > len(data) {
 			index = i
 			break
